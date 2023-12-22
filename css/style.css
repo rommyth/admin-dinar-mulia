@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Custom Bootstrap */
+
+.accordion-button:not(.collapsed) i {
+  background-color: var(--bs-white);
+}
+
+/* General */
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.fs__7 {
+  font-size: 11pt;
+}
+
+.bg__gradient-secondary {
+  background-image: linear-gradient(to right, transparent, #ddd, transparent);
+}
+
+.menu__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--bs-dark);
+}
+
+.menu__item.active {
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+.menu__item i {
+  padding: 10px;
+  background-color: var(--bs-primary-bg-subtle);
+  color: var(--bs-primary);
+  border-radius: 12px;
+}
+
+.menu__item.active i {
+  padding: 10px;
+  background-color: var(--bs-white);
+  color: var(--bs-primary);
+  border-radius: 12px;
+}
+
+.whitespace__nowarp {
+  white-space: nowrap;
+}
+
+.bg__purple {
+  background-color: #bb6bd9;
+}
+
+.bg__orange {
+  background-color: #f5a816;
+}
+
+.bg__blue {
+  background-color: #2d9cdb;
+}
+
+tbody tr td,
+th {
+  padding: 20px 8px !important;
+  color: var(--bs-secondary) !important;
+  white-space: nowrap;
+}
+
+tbody tr.table-primary td {
+  color: var(--bs-primary) !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000050;
+  overflow: scroll;
+  animation: modalAnimate 300ms;
+}
+
+@keyframes modalAnimate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal__content {
+  background-color: var(--bs-white);
+  border-radius: 15px;
+  width: 90%;
+  animation: modalContentAnimate 0.5s ease-in-out;
+}
+
+@keyframes modalContentAnimate {
+  from {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    z-index: 50 !important;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    left: -100%;
+    transition: all 300ms;
+  }
+  .sidebar.active {
+    left: 0%;
+  }
+}
