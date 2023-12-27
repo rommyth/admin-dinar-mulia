@@ -99,6 +99,8 @@
                         <td class="text-warning">Belum di Proses</td>
                         <td class="">
                           <button
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalPengajuan"
                             type="button"
                             class="btn btn-sm btn-primary flex-fill text-white w-100"
                           >
@@ -116,6 +118,8 @@
                         <td class="text-primary">Dalam Proses</td>
                         <td class="">
                           <button
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalCetak"
                             type="button"
                             class="btn btn-sm btn-blue flex-fill text-white w-100"
                           >
@@ -133,6 +137,8 @@
                         <td class="text__blue">Selesai</td>
                         <td class="">
                           <button
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetail"
                             type="button"
                             class="btn btn-sm btn-secondary flex-fill text-white w-100"
                           >
@@ -173,434 +179,367 @@
       </div>
     </section>
 
-    <!-- Modal Detail Request Item Emas Start -->
-    <div id="modal-detail-request" class="modal">
-      <div class="modal__content">
-        <div class="py-3 px-4 border-bottom border-secondary border-opacity-25">
-          <span class="fs-5 fw-semibold leading-0">Dokumen Pengajuan</span>
-        </div>
-        <div class="p-4">
-          <div class="row g-4">
-            <div class="col-12 col-lg-6">
-              <label class="form-label">ID User</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="124D0"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Nama</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="Faisal"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Tanggal Pengajuan</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="2023-12-02 13:43:22"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Produk Emas</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="Antam Certi 2 gram"
-                class="form-control"
-                disabled
-              />
-            </div>
-
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Kuantitas</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="1"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Harga</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="Rp1.234.000"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Tenor Pembayaran</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="6 Bulan"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Tanggal Pembayaran Awal</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="29-11-2023"
-                class="form-control"
-                disabled
-              />
-            </div>
+    <!-- Modal Proses Pengajuan Start -->
+    <div
+      class="modal modal-xl fade"
+      id="modalPengajuan"
+      tabindex="-1"
+      aria-labelledby="modalPengajuanLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalPengajuanLabel">
+              Dokumen Pengajuan
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-12 col-lg-6">
+                <label class="form-label">ID User</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="124D0"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Nama</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Faisal"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Nominal Cetakan</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="1 gram"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Jumlah Cetak</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="1 keping"
+                  class="form-control"
+                  disabled
+                />
+              </div>
 
-          <div class="mt-3">
-            <div
-              class="d-flex flex-row align-items-center gap-3 py-2 border-top border-bottom border-secondary border-opacity-10"
-            >
-              <i class="fa-solid fa-check-circle text__blue fs-5"></i>
-              <i class="fa-solid fa-id-card text-primary me-1 fs-5"></i>
-              <div class="flex-fill">Foto KTP</div>
-              <button type="button" class="btn btn-sm btn-primary">
-                Lihat Dokumen
-              </button>
-            </div>
-            <div
-              class="d-flex flex-row align-items-center gap-3 py-2 border-top border-bottom border-secondary border-opacity-10"
-            >
-              <i class="fa-solid fa-check-circle text__blue fs-5"></i>
-              <i class="fa-solid fa-user-circle text-primary me-1 fs-5"></i>
-              <div class="flex-fill">Foto Selfie</div>
-              <button type="button" class="btn btn-sm btn-primary">
-                Lihat Dokumen
-              </button>
-            </div>
-            <div
-              class="d-flex flex-row align-items-center gap-3 py-2 border-top border-bottom border-secondary border-opacity-10"
-            >
-              <i class="fa-solid fa-check-circle text__blue fs-5"></i>
-              <i class="fa-solid fa-chalkboard-user text-primary fs-5"></i>
-              <div class="flex-fill">Selfie dengan KTP</div>
-              <button type="button" class="btn btn-sm btn-primary">
-                Lihat Dokumen
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex flex-row align-items-center justify-content-end p-4 gap-2"
-        >
-          <button
-            id="close-modal"
-            type="button"
-            class="btn btn-secondary px-5 me-4"
-          >
-            Kembali
-          </button>
-          <button type="button" class="btn btn-warning text-white px-5">
-            Reject
-          </button>
-          <button type="button" class="btn btn-info text-white px-5">
-            Approve
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Modal Detail Item Emas End -->
-
-    <!-- Modal Detail Verification Payment Item Emas Start -->
-    <div id="modal-detail-verification-payment" class="modal">
-      <div class="modal__content">
-        <div class="py-3 px-4 border-bottom border-secondary border-opacity-25">
-          <span class="fs-5 fw-semibold leading-0">Detail Pinjaman Emas</span>
-        </div>
-        <div class="p-4">
-          <div class="row g-4">
-            <div class="col-12 col-lg-6">
-              <label class="form-label">ID User</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="124D0"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">ID Pinjaman</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="124D0"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Nama</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="Faisal"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">No. HP</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="087832930488"
-                class="form-control"
-                disabled
-              />
-            </div>
-
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Produk Emas</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="Antam Certi 2 gram"
-                class="form-control"
-                disabled
-              />
-            </div>
-
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Kuantitas</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="1"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Harga</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="Rp1.234.000"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Tenor Pembayaran</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="6 Bulan"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Tanggal Pembayaran Awal</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="29-11-2023"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Waktu Akhir Pinjaman</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="2023-12-02 13:43:22"
-                class="form-control"
-                disabled
-              />
-            </div>
-          </div>
-
-          <button
-            id="btn-show-jadwal-pembayaran"
-            class="mt-4 py-3 px-4 btn btn-blue w-100 d-flex flex-row align-items-center justify-content-between"
-          >
-            <div>Lihat Jadwal Pembayaran</div>
-            <i class="fa-solid fa-chevron-right text-white"></i>
-          </button>
-        </div>
-        <div
-          class="d-flex flex-row align-items-center justify-content-center p-4 gap-2"
-        >
-          <button
-            id="close-modal"
-            type="button"
-            class="btn btn-secondary text-white px-5"
-          >
-            Kembali
-          </button>
-          <button type="button" class="btn btn-blue text-white px-5">
-            Kirim Notifikasi
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Modal Detail Verification Payment Item Item Emas End -->
-
-    <!-- Modal Jadwal Pembayaran Item Emas Start -->
-    <div id="modal-jadwal-pembayaran" class="modal">
-      <div class="modal__content">
-        <div class="py-3 px-4 border-bottom border-secondary border-opacity-25">
-          <span class="fs-5 fw-semibold leading-0">Jadwal Pembayaran</span>
-        </div>
-        <div id="list__payment" class="p-4 d-flex flex-column gap-3">
-          <div class="list__item d-flex flex-row align-items-center gap-2">
-            <div style="flex: 2">
-              <h6>Pembayaran Tahap 1</h6>
-              <div class="py-2 px-3 bg-body-secondary">Rp 432.000</div>
-            </div>
-            <div style="flex: 1">
-              <h6>Tanggal Jatuh Tempo</h6>
-              <div class="py-2 px-3 bg-body-secondary">25 Desember 2023</div>
-            </div>
-            <div style="flex: 1">
-              <h6>Status</h6>
-              <div
-                class="py-2 px-3 bg-body-secondary d-flex flex-row align-items-center justify-content-between"
-              >
-                <div>Sudah di Bayar</div>
-                <i class="fa-solid fa-check-circle text__blue fs-5"></i>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Merek Cetakan</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Antam"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Lokasi Pengambilan</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="BMT Dinar Mulia"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Tanggal Pengajuan</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="29-03-2024"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Biaya Cetak</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Rp100.000"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Status Pembayaran</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Sudah dibayar"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Waktu Transaksi</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="2023-12-07 13:53:22"
+                  class="form-control"
+                  disabled
+                />
               </div>
             </div>
           </div>
-          <div class="list__item d-flex flex-row align-items-center gap-2">
-            <div style="flex: 2">
-              <h6>Pembayaran Tahap 2</h6>
-              <div class="py-2 px-3 bg-body-secondary">Rp 432.000</div>
-            </div>
-            <div style="flex: 1">
-              <h6>Tanggal Jatuh Tempo</h6>
-              <div class="py-2 px-3 bg-body-secondary">25 Januari 2024</div>
-            </div>
-            <div style="flex: 1">
-              <h6>Status</h6>
-              <div
-                class="py-2 px-3 bg-body-secondary d-flex flex-row align-items-center justify-content-between"
-              >
-                <div>Belum di Bayar</div>
-                <i
-                  class="fa-solid fa-check-circle text__blue fs-5 visually-hidden"
-                ></i>
-              </div>
-            </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Kembali
+            </button>
+            <button type="button" class="btn btn-primary">
+              Proses Keranjang
+            </button>
           </div>
-        </div>
-        <div
-          class="d-flex flex-row align-items-center justify-content-center p-4"
-        >
-          <button
-            id="close-modal-jadwal-pembayaran"
-            type="button"
-            class="btn btn-secondary text-white px-5"
-          >
-            Kembali
-          </button>
         </div>
       </div>
     </div>
-    <!-- Modal Jadwal Pembayaran Item Emas End -->
-    <script>
-      $(document).ready(function () {
-        // Close General /  All Modal
-        $(document).on('click', '#close-modal', function (e) {
-          e.preventDefault();
-          $('.modal').css('display', 'none');
-        });
+    <!-- Modal Proses Pengajuan End -->
 
-        // Toggle Modal Detail Request Approving
-        const modalDetailContent = $('#modal-detail-request');
+    <!-- Modal Cetak Selesai Start -->
+    <div
+      class="modal modal-lg fade"
+      id="modalCetak"
+      tabindex="-1"
+      aria-labelledby="modalCetakLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="p-5 pb-4">
+              <h5 class="text-center">
+                Apakah proses cetak udah selesai dilakukan?
+              </h5>
+              <p class="text-secondary text-center">
+                Perubahan status akan dilakukan ketika cetak sudah dikonfirmasi
+              </p>
+            </div>
 
-        $(document).on('click', '#btn-show-detail-request', function () {
-          modalDetailContent.css('display', 'flex');
-        });
+            <div
+              class="d-flex align-items-center justify-content-center gap-3 mb-4"
+            >
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                class="btn btn-secondary px-5"
+              >
+                Kembali
+              </button>
+              <button type="button" class="btn btn-blue px-5">Selesai</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Cetak Selesai End -->
 
-        modalDetailContent.on('click', function (e) {
-          e.preventDefault();
-          if (
-            !$('.modal__content').is(e.target) &&
-            !$('.modal__content').has(e.target).length
-          ) {
-            modalDetailContent.css('display', 'none');
-          }
-        });
+    <!-- Modal View Detail Start -->
+    <div
+      class="modal modal-xl fade"
+      id="modalDetail"
+      tabindex="-1"
+      aria-labelledby="modalDetailLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalDetailLabel">
+              Dokumen Pengajuan
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-12 col-lg-6">
+                <label class="form-label">ID User</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="124D0"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Nama</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Faisal"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Nominal Cetakan</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="1 gram"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Jumlah Cetak</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="1 keping"
+                  class="form-control"
+                  disabled
+                />
+              </div>
 
-        // Toggle modal-detail-verification-payment
-        const modalDetailVerifContent = $('#modal-detail-verification-payment');
-        $(document).on(
-          'click',
-          '#btn-show-detail-verification-payment',
-          function () {
-            modalDetailVerifContent.css('display', 'flex');
-          }
-        );
-
-        modalDetailVerifContent.on('click', function (e) {
-          e.preventDefault();
-          if (
-            !$('.modal__content').is(e.target) &&
-            !$('.modal__content').has(e.target).length
-          ) {
-            modalDetailVerifContent.css('display', 'none');
-          }
-        });
-
-        // Toggle modal-jadwal-pembayaran
-        const modalJadwalPembayaran = $('#modal-jadwal-pembayaran');
-        $(document).on('click', '#btn-show-jadwal-pembayaran', function () {
-          modalJadwalPembayaran.css('display', 'flex');
-        });
-
-        modalJadwalPembayaran.on('click', function (e) {
-          e.preventDefault();
-          if (
-            !$('.modal__content').is(e.target) &&
-            !$('.modal__content').has(e.target).length
-          ) {
-            modalJadwalPembayaran.css('display', 'none');
-          }
-        });
-
-        $(document).on('click', '#close-modal-jadwal-pembayaran', function () {
-          modalJadwalPembayaran.css('display', 'none');
-        });
-      });
-    </script>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Merek Cetakan</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Antam"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Lokasi Pengambilan</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="BMT Dinar Mulia"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Tanggal Pengajuan</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="29-03-2024"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Waktu Transaksi</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="2023-12-10 15:02:03"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">No.Transaksi</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="78975454654"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">No. Referensi</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="02167346821846512"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Status Pembayaran</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Sukses"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Status Cetak</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Selesai"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Kembali
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal View Detail End -->
   </body>
 </html>

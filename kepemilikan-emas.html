@@ -118,7 +118,8 @@
                         <td>20,14 gram</td>
                         <td class="">
                           <button
-                            id="btn-show-detail"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetail"
                             type="button"
                             class="btn btn-secondary w-100"
                           >
@@ -171,137 +172,126 @@
     </section>
 
     <!-- Modal Detail Item Emas Start -->
-    <div id="modal-detail" class="modal">
-      <div class="modal__content">
-        <div class="py-3 px-4 border-bottom border-secondary border-opacity-25">
-          <span class="fs-5 fw-semibold leading-0">Kepemilikan Emas</span>
-        </div>
-        <div class="p-4">
-          <div class="row g-4">
-            <div class="col-12 col-lg-6">
-              <label class="form-label">ID User</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="14616131"
-                class="form-control"
-                disabled
-              />
+    <div
+      class="modal modal-lg fade"
+      id="modalDetail"
+      tabindex="-1"
+      aria-labelledby="modalDetailLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalDetailLabel">
+              Kepemilikan Emas
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-12 col-lg-6">
+                <label class="form-label">ID User</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="14616131"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Email</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="tester@gmail.com"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Nama</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Mansyur"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Jumlah Transaksi</label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="20,54 gram"
+                  class="form-control"
+                  disabled
+                />
+              </div>
             </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Email</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="tester@gmail.com"
-                class="form-control"
-                disabled
-              />
+            <div class="mt-4 table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">No. Transaksi</th>
+                    <th scope="col">Tanggal Transaksi</th>
+                    <th scope="col">ID User</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Nominal</th>
+                    <th scope="col">Jumlah Emas</th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="">
+                    <td>14616131</td>
+                    <td>2023-11-21 07:43:22</td>
+                    <td>1061396</td>
+                    <td>Mansyur</td>
+                    <td>Rp1.297.845</td>
+                    <td>1,5 gram</td>
+                  </tr>
+                  <tr class="">
+                    <td>14616131</td>
+                    <td>2023-11-21 07:43:22</td>
+                    <td>1061396</td>
+                    <td>Mansyur</td>
+                    <td>Rp1.297.845</td>
+                    <td>1,5 gram</td>
+                  </tr>
+                  <tr class="">
+                    <td>14616131</td>
+                    <td>2023-11-21 07:43:22</td>
+                    <td>1061396</td>
+                    <td>Mansyur</td>
+                    <td>Rp1.297.845</td>
+                    <td>1,5 gram</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Nama</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="Mansyur"
-                class="form-control"
-                disabled
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="form-label">Jumlah Transaksi</label>
-              <input
-                type="text"
-                name=""
-                id=""
-                value="20,54 gram"
-                class="form-control"
-                disabled
-              />
+            <div class="modal-footer">
+              <button
+                data-bs-dismiss="modal"
+                type="button"
+                class="btn btn-secondary w-25"
+              >
+                Kembali
+              </button>
             </div>
           </div>
-
-          <div class="mt-4 table-responsive">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">No. Transaksi</th>
-                  <th scope="col">Tanggal Transaksi</th>
-                  <th scope="col">ID User</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Nominal</th>
-                  <th scope="col">Jumlah Emas</th>
-                </tr>
-              </thead>
-              <tbody class="">
-                <tr class="">
-                  <td>14616131</td>
-                  <td>2023-11-21 07:43:22</td>
-                  <td>1061396</td>
-                  <td>Mansyur</td>
-                  <td>Rp1.297.845</td>
-                  <td>1,5 gram</td>
-                </tr>
-                <tr class="">
-                  <td>14616131</td>
-                  <td>2023-11-21 07:43:22</td>
-                  <td>1061396</td>
-                  <td>Mansyur</td>
-                  <td>Rp1.297.845</td>
-                  <td>1,5 gram</td>
-                </tr>
-                <tr class="">
-                  <td>14616131</td>
-                  <td>2023-11-21 07:43:22</td>
-                  <td>1061396</td>
-                  <td>Mansyur</td>
-                  <td>Rp1.297.845</td>
-                  <td>1,5 gram</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div
-          class="d-flex flex-row align-items-center justify-content-center p-4"
-        >
-          <button id="close-modal" type="button" class="btn btn-secondary w-25">
-            Kembali
-          </button>
         </div>
       </div>
     </div>
     <!-- Modal Detail Item Emas End -->
-
-    <script>
-      $(document).ready(function () {
-        // Toggle Modal Detail
-        const modalDetailContent = $('#modal-detail');
-        const btnToggleDetail = $('#btn-show-detail');
-
-        $(document).on('click', '#btn-show-detail', function () {
-          modalDetailContent.css('display', 'flex');
-        });
-
-        modalDetailContent.on('click', function (e) {
-          e.preventDefault();
-          if (
-            !$('.modal__content').is(e.target) &&
-            !$('.modal__content').has(e.target).length
-          ) {
-            modalDetailContent.css('display', 'none');
-          }
-        });
-
-        // Close General /  All Modal
-        $(document).on('click', '#close-modal', function (e) {
-          e.preventDefault();
-          $('.modal').css('display', 'none');
-        });
-      });
-    </script>
   </body>
 </html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Arisan Emas</title>
+  </head>
+  <body>
+    <section class="position-relative">
+      <div class="row g-0">
+        <div
+          class="sidebar col-0 col-lg-3 sticky-top vh-100 overflow-scroll"
+        ></div>
+        <script src="js/sidebar.js"></script>
+
+        <div id="content-container" class="col-12 col-lg-9 bg-body-tertiary">
+          <!-- Tobar Start -->
+          <div id="topbar" class="sticky-top bg-primary-subtle w-100 p-4 z-1">
+            <div
+              class="d-flex flex-row align-items-center justify-content-between gap-2 gap-lg-5"
+            >
+              <button
+                id="sidebar-toggle"
+                class="d-block d-lg-none btn btn-outline-primary"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="">
+                <span class="fw-semibold">Stok Emas</span>
+              </div>
+
+              <div class="">
+                <div class="d-flex flex-row align-items-center gap-3">
+                  <i class="fa-solid fa-bell fs-4"></i>
+                  <img
+                    src="https://placehold.co/150x150/green/white?text=A"
+                    alt="Profil Admin"
+                    width="40"
+                    height="40"
+                    class="rounded-3"
+                  />
+                  <div class="d-none d-lg-block">
+                    <span class="fs-6">Hallo, Admin</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tobar End -->
+          <div id="body-content" class="">
+            <section aria-label="General Info" class="p-3">
+              <h3>Arisan Emas</h3>
+              <div class="bg-white p-3 rounded-lg">
+                <div
+                  class="d-flex flex-row align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-3"
+                >
+                  <h5>Daftar Arisan Emas</h5>
+                  <button
+                    type="button"
+                    id="btn-toggle-update"
+                    class="btn btn-primary px-3"
+                  >
+                    <i class="fa-solid fa-plus-circle me-2"></i>
+                    Buat Program
+                  </button>
+                </div>
+
+                <div
+                  aria-label="Filter Data Tabel"
+                  class="d-flex flex-row align-items-end gap-2 mt-3"
+                >
+                  <div>
+                    <label class="form-label">ID</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div>
+                    <label class="form-label">From</label>
+                    <input type="datetime-local" class="form-control" />
+                  </div>
+                  <div>
+                    <label class="form-label">To</label>
+                    <input type="datetime-local" class="form-control" />
+                  </div>
+                  <button class="flex-fill btn btn-primary">Reset</button>
+                  <button class="flex-fill btn btn-primary">Show</button>
+                </div>
+
+                <div class="mt-4 table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama Arisan</th>
+                        <th scope="col">Tanggal Mulai</th>
+                        <th scope="col">Tanggal Berakhir</th>
+                        <th scope="col">Waktu Program</th>
+                        <th scope="col">Besaran</th>
+                        <th scope="col">Peserta</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="">
+                      <tr class="">
+                        <td>00004</td>
+                        <td>Arisan Berkah Tahap 4</td>
+                        <td>2023-12-07</td>
+                        <td>2023-10-07</td>
+                        <td>10 Bulan</td>
+                        <td>10 gram</td>
+                        <td>2/10 Orang</td>
+                        <td class="text-warning">In Progress</td>
+                        <td class="">
+                          <button class="btn btn-blue px-5">Mulai</button>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td>00005</td>
+                        <td>Arisan Berkah Tahap Yanto</td>
+                        <td>2023-12-07</td>
+                        <td>2023-10-07</td>
+                        <td>10 Bulan</td>
+                        <td>8 gram</td>
+                        <td>10/10 Orang</td>
+                        <td class="text-primary">Aktif</td>
+                        <td class="">
+                          <button class="btn btn-secondary px-5">Detail</button>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td>00006</td>
+                        <td>Arisan Berkah Tahap Jamilah</td>
+                        <td>2023-12-07</td>
+                        <td>2023-10-07</td>
+                        <td>10 Bulan</td>
+                        <td>9 gram</td>
+                        <td>10/10 Orang</td>
+                        <td class="text__blue">Selesai</td>
+                        <td class="">
+                          <button class="btn btn-secondary px-5">Detail</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <nav aria-label="Page navigation example" class="float-end">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
