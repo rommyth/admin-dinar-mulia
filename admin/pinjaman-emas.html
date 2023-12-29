@@ -556,66 +556,66 @@
     <script>
       $(document).ready(function () {
         // Close General /  All Modal
-        $(document).on('click', '#close-modal', function (e) {
+        $(document).on("click", "#close-modal", function (e) {
           e.preventDefault();
-          $('.modal').css('display', 'none');
+          $(".modal").css("display", "none");
         });
 
         // Toggle Modal Detail Request Approving
-        const modalDetailContent = $('#modal-detail-request');
+        const modalDetailContent = $("#modal-detail-request");
 
-        $(document).on('click', '#btn-show-detail-request', function () {
-          modalDetailContent.css('display', 'flex');
+        $(document).on("click", "#btn-show-detail-request", function () {
+          modalDetailContent.css("display", "flex");
         });
 
-        modalDetailContent.on('click', function (e) {
+        modalDetailContent.on("click", function (e) {
           e.preventDefault();
           if (
-            !$('.modal__content').is(e.target) &&
-            !$('.modal__content').has(e.target).length
+            !$(".modal__content").is(e.target) &&
+            !$(".modal__content").has(e.target).length
           ) {
-            modalDetailContent.css('display', 'none');
+            modalDetailContent.css("display", "none");
           }
         });
 
         // Toggle modal-detail-verification-payment
-        const modalDetailVerifContent = $('#modal-detail-verification-payment');
+        const modalDetailVerifContent = $("#modal-detail-verification-payment");
         $(document).on(
-          'click',
-          '#btn-show-detail-verification-payment',
+          "click",
+          "#btn-show-detail-verification-payment",
           function () {
-            modalDetailVerifContent.css('display', 'flex');
+            modalDetailVerifContent.css("display", "flex");
           }
         );
 
-        modalDetailVerifContent.on('click', function (e) {
+        modalDetailVerifContent.on("click", function (e) {
           e.preventDefault();
           if (
-            !$('.modal__content').is(e.target) &&
-            !$('.modal__content').has(e.target).length
+            !$(".modal__content").is(e.target) &&
+            !$(".modal__content").has(e.target).length
           ) {
-            modalDetailVerifContent.css('display', 'none');
+            modalDetailVerifContent.css("display", "none");
           }
         });
 
         // Toggle modal-jadwal-pembayaran
-        const modalJadwalPembayaran = $('#modal-jadwal-pembayaran');
-        $(document).on('click', '#btn-show-jadwal-pembayaran', function () {
-          modalJadwalPembayaran.css('display', 'flex');
+        const modalJadwalPembayaran = $("#modal-jadwal-pembayaran");
+        $(document).on("click", "#btn-show-jadwal-pembayaran", function () {
+          modalJadwalPembayaran.css("display", "flex");
         });
 
-        modalJadwalPembayaran.on('click', function (e) {
+        modalJadwalPembayaran.on("click", function (e) {
           e.preventDefault();
           if (
-            !$('.modal__content').is(e.target) &&
-            !$('.modal__content').has(e.target).length
+            !$(".modal__content").is(e.target) &&
+            !$(".modal__content").has(e.target).length
           ) {
-            modalJadwalPembayaran.css('display', 'none');
+            modalJadwalPembayaran.css("display", "none");
           }
         });
 
-        $(document).on('click', '#close-modal-jadwal-pembayaran', function () {
-          modalJadwalPembayaran.css('display', 'none');
+        $(document).on("click", "#close-modal-jadwal-pembayaran", function () {
+          modalJadwalPembayaran.css("display", "none");
         });
       });
     </script>

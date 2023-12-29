@@ -1,0 +1,20 @@
+[
+  {
+    "id": "M-01",
+    "name": "Bukit Mas Mulia Internusa",
+    "status": "Active",
+    "created_at": "2023-12-07 13:43:22"
+  },
+  {
+    "id": "M-02",
+    "name": "Antam",
+    "status": "Active",
+    "created_at": "2023-12-07 13:43:22"
+  },
+  {
+    "id": "M-03",
+    "name": "Bintang Emas",
+    "status": "Active",
+    "created_at": "2023-12-07 13:43:22"
+  }
+]

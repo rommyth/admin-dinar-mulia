@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
+    />
+
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    <title>Pendapatan Komisi</title>
+  </head>
+  <body>
+    <section>
+      <div class="row g-0">
+        <div class="sidebar col-0 col-lg-3 sticky-top vh-100 overflow-scroll">
+          <div class="position-relative bg-white">
+            <div
+              class="d-flex flex-row align-items-center justify-content-between"
+            >
+              <div class="p-4">
+                <img src="assets/logo/logo__primary.png" alt="" />
+              </div>
+
+              <i
+                class="fa-solid fa-chevron-left py-3 px-2 bg-primary-subtle d-block d-lg-none"
+              ></i>
+            </div>
+            <div
+              class="w-100 mx-auto bg__gradient-secondary"
+              style="height: 1px"
+            ></div>
+            <section aria-label="side-navbar" class="px-4">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="dashboard.html" class="menu__item active">
+                    <div>
+                      <i class="fa-solid fa-house-chimney me-2"></i>
+                      <span>Dashboard</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div
+                    class="accordion accordion-flush"
+                    id="accordionLogamMulia"
+                  >
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed menu__item rounded-4"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-logam-mulia"
+                          aria-expanded="false"
+                          aria-controls="flush-logam-mulia"
+                        >
+                          <i
+                            class="fa-solid fa-coins"
+                            style="margin-right: 14px"
+                          ></i>
+                          <span>Company Group</span>
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-logam-mulia"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionLogamMulia"
+                      >
+                        <div class="accordion-body pe-0 pt-0">
+                          <a href="stok-emas.html" class="menu__item py-2">
+                            <div>
+                              <i class="fa-solid fa-cube me-2"></i>
+                              <span>Data Company</span>
+                            </div>
+                          </a>
+                          <a
+                            href="kepemilikan-emas.html"
+                            class="menu__item py-2"
+                          >
+                            <div>
+                              <i class="fa-solid fa-kaaba me-2"></i>
+                              <span>Deleted Data</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="accordion accordion-flush"
+                    id="accordionTraansaction"
+                  >
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button collapsed menu__item rounded-4"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-transaction"
+                          aria-expanded="false"
+                          aria-controls="flush-transaction"
+                        >
+                          <i
+                            class="fa-solid fa-coins"
+                            style="margin-right: 14px"
+                          ></i>
+                          <span>Transaction</span>
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-transaction"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionTraansaction"
+                      >
+                        <div class="accordion-body pe-0 pt-0">
+                          <a href="stok-emas.html" class="menu__item py-2">
+                            <div>
+                              <i class="fa-solid fa-cube me-2"></i>
+                              <span>Data Transaksi</span>
+                            </div>
+                          </a>
+                          <a
+                            href="kepemilikan-emas.html"
+                            class="menu__item py-2"
+                          >
+                            <div>
+                              <i class="fa-solid fa-kaaba me-2"></i>
+                              <span>Pendapatan Komisi</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <a href="#" class="menu__item">
+                    <div>
+                      <i class="fa-solid fa-shop me-2"></i>
+                      <span>Manufacture</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item">
+                    <div>
+                      <i class="fa-solid fa-image me-2"></i>
+                      <span>System Master</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <!-- <script src="js/sidebar.js"></script> -->
+
+        <div id="content-container" class="col-12 col-lg-9 bg-body-tertiary">
+          <div id="topbar" class="sticky-top bg-primary-subtle w-100 p-4 z-1">
+            <div
+              class="d-flex flex-row align-items-center justify-content-between gap-2 gap-lg-5"
+            >
+              <button
+                id="sidebar-toggle"
+                class="d-block d-lg-none btn btn-outline-primary"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="">
+                <span class="fw-semibold">Transaction</span>
+              </div>
+              <div class="">
+                <div class="d-flex flex-row align-items-center gap-3">
+                  <i class="fa-solid fa-bell fs-4"></i>
+                  <img
+                    src="https://placehold.co/150x150/green/white?text=A"
+                    alt="Profil Admin"
+                    width="40"
+                    height="40"
+                    class="rounded-3"
+                  />
+                  <div class="d-none d-lg-block">
+                    <span class="fs-6">Hallo, Admin</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="body-content" class="p-3">
+            <h3>Transaction</h3>
+            <section class="bg-white rounded-3">
+              <div
+                class="d-flex flex-row align-items-center justify-content-between p-3 border-bottom border-secondary-subtle"
+              >
+                <span class="fs-5">Pendapatan Komisi</span>
+              </div>
+
+              <section aria-label="Filter" class="p-3">
+                <div class="row g-3">
+                  <div class="col-12 col-lg-3">
+                    <div>
+                      <label for="" class="form-label">Select Company</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-3">
+                    <div>
+                      <label for="" class="form-label">From</label>
+                      <input type="datetime-local" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-3">
+                    <div>
+                      <label for="" class="form-label">To</label>
+                      <input type="datetime-local" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-3">
+                    <label for="" class="form-label">&nbsp;</label>
+                    <div class="d-flex flex-row align-items-center gap-3">
+                      <button class="btn btn-secondary w-100">Reset</button>
+                      <button class="btn btn-primary w-100">Search</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 row">
+                  <div class="col-12 col-lg-4">
+                    <div
+                      class="bg-body-secondary p-3 rounded-3 d-flex flex-row align-items-center justify-content-between"
+                    >
+                      <div>
+                        <div class="text-secondary fs__7">Total Komisi</div>
+                        <div class="fs-5 fw-semibold">
+                          Rp3.462.250
+                          <span class="text-success fs__7">+Rp510.000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section aria-label="Table Data" class="mt-3 p-3">
+                <div class="table-responsive">
+                  <table id="myTable" class="table table-hover"></table>
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Tambah Start -->
+    <div class="modal modal-lg fade" id="modalTambah" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Input Data Company</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3">
+                <label for="" class="form-label">Nama</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Store</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">No. HP</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Password</label>
+                <input type="password" class="form-control" />
+              </div>
+              <div class="w-100 bg-secondary-subtle" style="height: 1px"></div>
+              <div class="mb-3 mt-3">
+                <label for="" class="form-label">Kontrak</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Choose</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Lama Kontrak</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Choose</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+
+              <div
+                class="d-flex flex-row align-items-center justify-content-end gap-3 mt-5"
+              >
+                <button
+                  type="button"
+                  data-bs-dismiss="modal"
+                  class="btn btn-secondary px-5"
+                >
+                  Kembali
+                </button>
+                <button type="submit" class="btn btn-primary px-5">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Tambah End -->
+
+    <!-- Modal Konfirmasi Delete Start -->
+    <div
+      class="modal modal-lg fade"
+      id="modalDelete"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body pt-5">
+            <div class="text-center">
+              <h5>Apakah kamu yakin ingin menghapus data ini?</h5>
+              <p class="text-secondary">
+                Data yang dihapus tidak dapat dikembalikan
+              </p>
+            </div>
+            <div
+              class="d-flex flex-row align-items-center justify-content-center gap-3 mt-5"
+            >
+              <button
+                type="button"
+                class="btn btn-secondary px-5"
+                data-bs-dismiss="modal"
+              >
+                Kembali
+              </button>
+              <button type="button" class="btn btn-primary px-5">Hapus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Konfirmasi Delete End -->
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          url: "./data-transaksi.json",
+          method: "GET",
+          success: function (data) {
+            // Initialize DataTables and populate with data
+            $("#myTable").DataTable({
+              data: data,
+              columns: [
+                { data: "no_transaction", title: "No. Transaksi" },
+                { data: "craeted_at", title: "Waktu Transaksi" },
+                { data: "company_name", title: "Nama Company" },
+                { data: "price", title: "Nominal Transaksi" },
+                { data: "status", title: "Status" },
+
+                {
+                  title: "Action",
+                  render: function (data, type, row) {
+                    return `
+                        <button class="btn btn-secondary btn-sm text-white px-5">Lihat Detail</button>
+                    `;
+                  },
+                },
+              ],
+            });
+          },
+          error: function (error) {
+            console.error("Error fetching data:", error);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
